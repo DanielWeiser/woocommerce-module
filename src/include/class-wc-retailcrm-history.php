@@ -712,14 +712,13 @@ if ( ! class_exists( 'WC_Retailcrm_History' ) ) :
                     $arItemsNew = array();
                     $arItemsOld = array();
                     $item = retailcrm_get_wc_product($product['offer'][$this->bind_field], $this->retailcrm_settings);
-
                     if (!$item) {
                         $logger = new WC_Logger();
                         $logger->add('retailcrm', 'Product not found by ' . $this->bind_field);
                         continue;
                     }
 
-                    if (isset($product['discountTotal']) && $product['discountTotal'] > 0) {
+                    if ($product['discountTotal'] > 0) {
                         $item->set_price($product['initialPrice'] - $product['discountTotal']);
                     }
 
