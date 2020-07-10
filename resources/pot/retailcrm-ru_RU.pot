@@ -237,3 +237,6 @@ msgstr "Поддержка корпоративных клиентов"
 
 msgid "Enabled"
 msgstr "Включено"
+
+msgid "Orders are not uploaded, see the details in the log file"
+msgstr "Заказы не были выгружены, смотрите подробности в журнале"

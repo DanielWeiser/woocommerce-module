@@ -213,7 +213,7 @@ if (!class_exists('WC_Retailcrm_Base')) {
             }
 
             if ($ids) {
-                $this->orders->ordersUpload($ids);
+                wp_send_json($this->orders->ordersUpload($ids));
             }
         }
 

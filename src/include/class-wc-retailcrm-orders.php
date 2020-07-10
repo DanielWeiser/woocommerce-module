@@ -67,7 +67,7 @@ if ( ! class_exists( 'WC_Retailcrm_Orders' ) ) :
          *
          * @param array $include
          *
-         * @return array $uploadOrders | null
+         * @return bool
          * @throws \Exception
          */
         public function ordersUpload($include = array())
@@ -109,7 +109,11 @@ if ( ! class_exists( 'WC_Retailcrm_Orders' ) ) :
             static::logOrdersUploadErrors($regularUploadErrors, 'Error while uploading these regular orders');
             static::logOrdersUploadErrors($corporateUploadErrors, 'Error while uploading these corporate orders');
 
-            return array();
+            if (!empty($regularUploadErrors) || !empty($corporateUploadErrors)) {
+                return false;
+            }
+
+            return true;
         }
 
         /**

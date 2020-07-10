@@ -89,7 +89,11 @@ abstract class WC_Retailcrm_Abstracts_Settings extends WC_Integration
                     type: "POST",
                     url: '<?php echo $ajax_url; ?>?action=order_upload&order_ids_retailcrm=' + jQuery('#<?php echo $ids; ?>').val(),
                     success: function (response) {
-                        alert('<?php echo __('Orders were uploaded', 'retailcrm'); ?>');
+                        if (response) {
+                            alert('<?php echo __('Orders were uploaded', 'retailcrm'); ?>');
+                        } else {
+                            alert('<?php echo __('Orders are not uploaded, see the details in the log file', 'retailcrm'); ?>');
+                        }
                     }
                 });
             }
