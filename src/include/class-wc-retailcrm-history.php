@@ -718,7 +718,7 @@ if ( ! class_exists( 'WC_Retailcrm_History' ) ) :
                         continue;
                     }
 
-                    if ($product['discountTotal'] > 0) {
+                    if (isset($product['discountTotal']) && $product['discountTotal'] > 0) {
                         $item->set_price($product['initialPrice'] - $product['discountTotal']);
                     }
 
