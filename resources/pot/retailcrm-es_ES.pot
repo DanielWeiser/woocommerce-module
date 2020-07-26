@@ -228,3 +228,6 @@ msgstr "Soporte a clientes corporativos"
 
 msgid "Enabled"
 msgstr "Habilitado"
+
+msgid "Orders are not uploaded, see the details in the log file"
+msgstr "Los pedidos no se han subido, para más información revisa los registros"
