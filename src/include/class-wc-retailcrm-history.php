@@ -1180,5 +1180,10 @@ if ( ! class_exists( 'WC_Retailcrm_History' ) ) :
             return isset($arr[$key]) ? $arr[$key] : $def;
         }
     }
+<<<<<<< HEAD
 
 endif;
+=======
+    
+endif;
+>>>>>>> b878f43... skip product if item not found by id
